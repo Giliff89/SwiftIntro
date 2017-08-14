@@ -23,8 +23,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ire-P3-uhc">
-                                <rect key="frame" x="136" y="354" width="95" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b0Y-dZ-nCw">
+                                <rect key="frame" x="137.5" y="279" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="otl-p5-TAa"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T6F-qA-P3k">
+                                <rect key="frame" x="137.5" y="224" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="oOR-UD-DIC"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDu-4c-Uos">
+                                <rect key="frame" x="163" y="167" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ire-P3-uhc">
+                                <rect key="frame" x="155.5" y="359" width="64" height="30"/>
                                 <state key="normal" title="Push me!"/>
                                 <connections>
                                     <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcN-rg-H0B"/>
@@ -33,15 +54,24 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ire-P3-uhc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XWB-0K-5x0"/>
-                            <constraint firstItem="ire-P3-uhc" firstAttribute="top" secondItem="KkC-Ch-o2L" secondAttribute="bottom" constant="10" id="ahv-xR-598"/>
+                            <constraint firstItem="T6F-qA-P3k" firstAttribute="top" secondItem="ZDu-4c-Uos" secondAttribute="bottom" constant="26" id="0P0-a7-mns"/>
+                            <constraint firstItem="T6F-qA-P3k" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AJK-Wu-GS4"/>
+                            <constraint firstItem="b0Y-dZ-nCw" firstAttribute="top" secondItem="T6F-qA-P3k" secondAttribute="bottom" constant="25" id="EWk-p1-Tnl"/>
+                            <constraint firstItem="ire-P3-uhc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RKJ-Yv-bTG"/>
+                            <constraint firstItem="ZDu-4c-Uos" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Tqx-XL-e1R"/>
+                            <constraint firstItem="ire-P3-uhc" firstAttribute="top" secondItem="KkC-Ch-o2L" secondAttribute="bottom" constant="15" id="e6I-vE-uxv"/>
+                            <constraint firstItem="KkC-Ch-o2L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iKp-hB-g2o"/>
                             <constraint firstItem="KkC-Ch-o2L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lwQ-Xe-7ip"/>
-                            <constraint firstItem="KkC-Ch-o2L" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="neh-2c-tDa"/>
+                            <constraint firstItem="KkC-Ch-o2L" firstAttribute="top" secondItem="b0Y-dZ-nCw" secondAttribute="bottom" constant="14" id="suO-k1-0Kf"/>
+                            <constraint firstItem="b0Y-dZ-nCw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wfq-AW-s0w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="additionSwitch" destination="ZDu-4c-Uos" id="Mn9-6k-WF3"/>
+                        <outlet property="bottomTextField" destination="b0Y-dZ-nCw" id="bD1-Io-U9L"/>
                         <outlet property="myLabel" destination="KkC-Ch-o2L" id="9Oi-9j-3Qc"/>
+                        <outlet property="topTextField" destination="T6F-qA-P3k" id="Ll3-MI-BPU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
